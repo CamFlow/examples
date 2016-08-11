@@ -81,7 +81,7 @@ int main(){
     printf("Failed Tracking, error %d\n", errno);
     printf("%s\n\n",strerror(errno));
   }
-  if(cp("./test/output.txt", "./test/input.txt")){
+  if(cp("./provenance/output.txt", "./provenance/input.txt")){
     printf("Failed copying, error %d\n", errno);
     printf("%s\n\n",strerror(errno));
   }
