@@ -1,7 +1,7 @@
 INCLUDES = -I/usr/local/include
 CCFLAGS = -g -O2 -fpic
 CCC = gcc
-LIB = /usr/local/lib/provenancelib.a -lpthread
+LIB = /usr/local/lib/provenancelib.a -lpthread -lz
 
 .SUFFIXES: .c
 
