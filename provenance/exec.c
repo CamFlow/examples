@@ -7,7 +7,7 @@
 
 #include "provenancelib.h"
 
-#define PROGRAM "./test/file.o"
+#define PROGRAM "./provenance/pipe.o"
 
 int main( void ){
   char *envp[] = { NULL };
