@@ -11,6 +11,10 @@ int main( void ){
     printf("Failed Tracking, error %d\n", errno);
     printf("%s\n\n",strerror(errno));
   }
+  if(provenance_set_propagate(true)){
+    printf("Failed propagate, error %d\n", errno);
+    printf("%s\n\n",strerror(errno));
+  }
   printf("Enter input: ");
   scanf("%d", &a);
   printf("Input was %d\n", a);

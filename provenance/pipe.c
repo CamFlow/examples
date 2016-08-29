@@ -17,7 +17,11 @@ int main(void)
 
 
         if(provenance_set_tracked(true)){
-          printf("Failed Tracking, error %d\n", errno);
+          printf("Failed tracking, error %d\n", errno);
+          printf("%s\n\n",strerror(errno));
+        }
+        if(provenance_set_propagate(true)){
+          printf("Failed propagate, error %d\n", errno);
           printf("%s\n\n",strerror(errno));
         }
         pipe(fd);
