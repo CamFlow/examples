@@ -16,6 +16,8 @@
 
 #define BUFSIZE 1024
 
+#define HELLO_WORLD "GET / HTTP/1.1\n\n"
+
 /*
  * error - wrapper for perror
  */
@@ -47,7 +49,6 @@ int main(int argc, char **argv) {
     }
     hostname = argv[1];
     portno = atoi(argv[2]);
-
     /* socket: create the socket */
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0)
@@ -71,10 +72,7 @@ int main(int argc, char **argv) {
     if (connect(sockfd, (const struct sockaddr*)&serveraddr, sizeof(serveraddr)) < 0)
       error("ERROR connecting");
 
-    /* get message line from the user */
-    printf("Please enter msg: ");
-    bzero(buf, BUFSIZE);
-    fgets(buf, BUFSIZE, stdin);
+    strncpy(buf, HELLO_WORLD, BUFSIZE);
 
     /* send the message line to the server */
     n = write(sockfd, buf, strlen(buf));
@@ -86,7 +84,7 @@ int main(int argc, char **argv) {
     n = read(sockfd, buf, BUFSIZE);
     if (n < 0)
       error("ERROR reading from socket");
-    printf("Echo from server: %s", buf);
+    printf("Echo from server: %s\n\n", buf);
     close(sockfd);
     return 0;
 }
