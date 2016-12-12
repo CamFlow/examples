@@ -37,7 +37,7 @@ int main(void){
   ifc_add_integrity(&context, tag);
   ifc_context_print(&context);
   sprintf(name, "./test-%d.tmp", pid);
-  f = open(name, O_RDWR | O_CREAT);
+  f = open(name, O_RDWR | O_CREAT, S_IRUSR|S_IWUSR);
   write(f, STRING, strlen(STRING));
   printf("Try: camflow-ifc -f ./test-%d.tmp\n", pid);
   map = mmap(0, 40, PROT_READ, MAP_SHARED, f, 0);
