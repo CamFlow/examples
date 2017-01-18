@@ -22,6 +22,9 @@ pipe:
 std:
 	$(CCC) $(INCLUDES) std.c $(LIB) -o std.o $(CCFLAGS)
 
+std:
+	$(CCC) $(INCLUDES) mmap.c $(LIB) -o mmap.o $(CCFLAGS)
+
 tcp-client:
 	$(CCC) $(INCLUDES) tcp-client.c $(LIB) -o tcp-client.o $(CCFLAGS)
 
