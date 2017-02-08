@@ -10,8 +10,8 @@
 
 #include "provenancelib.h"
 
-#define FILEPATH "/tmp/mmapped.bin"
-#define TESTPATH "/tmp/test-cf.bin"
+#define FILEPATH "./mmapped.bin"
+#define TESTPATH "./test-cf.bin"
 #define NUMINTS  (1000)
 #define FILESIZE (NUMINTS * sizeof(int))
 
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-      sleep(1);            
+      sleep(1);
     }
 
 
