@@ -8,8 +8,8 @@
 #include "provenancelib.h"
 #include "provenancePovJSON.h"
 
-prov_identifier_t last;
-prov_identifier_t current;
+union prov_identifier last;
+union prov_identifier current;
 
 int cp(const char *to, const char *from)
 {
