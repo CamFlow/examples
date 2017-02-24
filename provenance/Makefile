@@ -5,7 +5,7 @@ LIB = /usr/local/lib/provenancelib.a -lpthread -lz
 
 .SUFFIXES: .c
 
-all: exec file fork pipe std tcp-client tcp-server print
+all: exec file fork pipe std mmap tcp-client tcp-server print
 
 exec:
 	$(CCC) $(INCLUDES) exec.c $(LIB) -o exec.o $(CCFLAGS)
@@ -22,7 +22,7 @@ pipe:
 std:
 	$(CCC) $(INCLUDES) std.c $(LIB) -o std.o $(CCFLAGS)
 
-std:
+mmap:
 	$(CCC) $(INCLUDES) mmap.c $(LIB) -o mmap.o $(CCFLAGS)
 
 tcp-client:
