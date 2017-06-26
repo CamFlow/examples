@@ -9,7 +9,7 @@ camflow:
 	sudo camflow --track-ipv4-ingress 10.5.0.0/16:0 propagate
 	camflow -s
 
-run: network camflow
+run:
 	sudo docker run -p 49165:8080 --net=demo --ip='10.5.0.2' --name=proxy proxypy &
 	sudo docker run -p 49166:8081 --net=demo --ip='10.5.0.3' --name=server serverpy &
 
