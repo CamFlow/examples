@@ -10,8 +10,8 @@
 #define PROGRAM "./provenance/pipe.o"
 
 int main( void ){
-  char *envp[] = { NULL };
-  char *argv[] = {PROGRAM , NULL};
+  char *envp[] = { "aa", "bb", NULL };
+  char *argv[] = {PROGRAM , "test", "test", NULL};
 
   if(provenance_set_tracked(true)){
     printf("Failed Tracking, error %d\n", errno);
