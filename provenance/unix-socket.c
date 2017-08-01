@@ -9,7 +9,7 @@
 #include <string.h>
 #include <errno.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 void error(char *msg)
 {

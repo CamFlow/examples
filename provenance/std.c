@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <string.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 int main( void ){
   int a;

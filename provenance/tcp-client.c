@@ -12,7 +12,7 @@
 #include <netdb.h>
 #include <errno.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 #define BUFSIZE 1024
 

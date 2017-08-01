@@ -8,7 +8,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 #define FILEPATH "./mmapped.bin"
 #define TESTPATH "./test-cf.bin"

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 #define PROGRAM "./provenance/pipe.o"
 

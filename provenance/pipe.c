@@ -6,7 +6,7 @@
 #include <string.h>
 #include <sys/types.h>
 
-#include "provenancelib.h"
+#include "provenance.h"
 
 int main(void)
 {
