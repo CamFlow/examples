@@ -6,7 +6,6 @@
 #include <string.h>
 
 #include "provenance.h"
-#include "provenancePovJSON.h"
 
 union prov_identifier last;
 union prov_identifier current;

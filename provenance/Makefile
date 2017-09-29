@@ -1,4 +1,4 @@
-INCLUDES = -I/usr/local/include
+INCLUDES = -I/usr/include
 CCFLAGS = -g -O2 -fpic
 CCC = gcc
 LIB = -lprovenance -lpthread -lz
