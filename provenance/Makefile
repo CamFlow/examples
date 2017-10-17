@@ -5,7 +5,7 @@ LIB = -lprovenance -lpthread -lz
 
 .SUFFIXES: .c
 
-all: exec file fork pipe std mmap tcp-client tcp-server print unix
+all: exec file fork pipe std mmap tcp-client tcp-server print unix id
 
 exec:
 	$(CCC) $(INCLUDES) exec.c $(LIB) -o exec.o $(CCFLAGS)
@@ -36,6 +36,9 @@ print:
 
 unix:
 	$(CCC) $(INCLUDES) unix-socket.c $(LIB) -o unix-socket.o $(CCFLAGS)
+
+id:
+	$(CCC) $(INCLUDES) id.c $(LIB) -o id.o $(CCFLAGS)
 
 clean:
 	rm -f *.o
