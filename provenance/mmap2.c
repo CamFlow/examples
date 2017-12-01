@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     int fd;
     int result;
     int *map;  /* mmapped array of int's */
+    char buffer[16];
     pid_t childpid;
 
     if(provenance_set_tracked(true)){
@@ -85,36 +86,20 @@ int main(int argc, char *argv[])
 	     map[i] = 2 * i;
     }
 
-    if((childpid = fork()) == -1)
-    {
-      perror("fork");
-      exit(1);
+    fd = open(TESTPATH, O_RDWR | O_CREAT | O_TRUNC, (mode_t)0600);
+    if (fd == -1) {
+      perror("Error opening file for writing");
+      exit(EXIT_FAILURE);
     }
-
-    if(childpid == 0)
-    {
-      fd = open(TESTPATH, O_RDWR | O_CREAT | O_TRUNC, (mode_t)0600);
-      if (fd == -1) {
-        perror("Error opening file for writing");
-        exit(EXIT_FAILURE);
-      }
-      sleep(1);
-    }
-    else
-    {
-      sleep(1);
-    }
+    write(fd, "test", 4);
+    read(fd, buffer, 16);
+    sleep(1);
 
 
     /* Don't forget to free the mmapped memory
      */
     if (munmap(map, FILESIZE) == -1) {
 	     perror("Error un-mmapping the file");
-       /* Decide here whether to close(fd) and exit() or not. Depends... */
     }
-
-    /* Un-mmaping doesn't close the file, so we still need to do that.
-     */
-    close(fd);
     return 0;
 }

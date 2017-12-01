@@ -5,7 +5,7 @@ LIB = -lprovenance -lpthread -lz
 
 .SUFFIXES: .c
 
-all: exec file fork pipe std mmap tcp-client tcp-server print unix id thread
+all: exec file fork pipe std mmap mmap2 tcp-client tcp-server print unix id thread
 
 exec:
 	$(CCC) $(INCLUDES) exec.c $(LIB) -o exec.o $(CCFLAGS)
@@ -24,6 +24,9 @@ std:
 
 mmap:
 	$(CCC) $(INCLUDES) mmap.c $(LIB) -o mmap.o $(CCFLAGS)
+
+mmap2:
+	$(CCC) $(INCLUDES) mmap2.c $(LIB) -o mmap2.o $(CCFLAGS)
 
 tcp-client:
 	$(CCC) $(INCLUDES) tcp-client.c $(LIB) -o tcp-client.o $(CCFLAGS)
