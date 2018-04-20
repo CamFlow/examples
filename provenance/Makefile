@@ -5,7 +5,7 @@ LIB = -lprovenance -lpthread -lz
 
 .SUFFIXES: .c
 
-all: exec file fork pipe std mmap mmap2 tcp-client tcp-server print unix id thread many_write
+all: open exec file fork pipe std mmap mmap2 tcp-client tcp-server print unix id thread many_write
 
 exec:
 	$(CCC) $(INCLUDES) exec.c $(LIB) -o exec.o $(CCFLAGS)
@@ -48,6 +48,9 @@ thread:
 
 many_write:
 	$(CCC) $(INCLUDES) many_write.c $(LIB) -o many_write.o $(CCFLAGS)
+
+open:
+	$(CCC) $(INCLUDES) open.c $(LIB) -o open.o $(CCFLAGS)
 
 clean:
 	rm -f *.o
