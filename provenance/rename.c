@@ -14,7 +14,7 @@ int main( void ){
   }
   rename("./provenance/input.txt", "./provenance/rename_input.txt");
   provenance_propagate_file("./provenance/rename_input.txt", false);
-  if(provenance_set_propagate(false )){
+  if(provenance_set_propagate(false)){
     printf("Failed propagate, error %d\n", errno);
     printf("%s\n\n",strerror(errno));
   }
