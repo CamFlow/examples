@@ -37,6 +37,12 @@ tcp-client:
 tcp-server:
 	$(CCC) $(INCLUDES) tcp-server.c $(LIB) -o tcp-server.o $(CCFLAGS)
 
+ipv6-tcp-client:
+	$(CCC) $(INCLUDES) ipv6-tcp-client.c $(LIB) -o ipv6-tcp-client.o $(CCFLAGS)
+
+ipv6-tcp-server:
+	$(CCC) $(INCLUDES) ipv6-tcp-server.c $(LIB) -o ipv6-tcp-server.o $(CCFLAGS)
+
 print:
 	$(CCC) $(INCLUDES) print.c $(LIB) -o print.o $(CCFLAGS)
 
