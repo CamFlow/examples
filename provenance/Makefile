@@ -5,7 +5,7 @@ LIB = -lprovenance -lpthread -lz
 
 .SUFFIXES: .c
 
-all: socketpair open exec file fork pipe std mmap mmap2 tcp-client tcp-server print unix id thread many_write getpgid rename
+all: socketpair open exec file fork pipe std mmap mmap2 tcp-client tcp-server print unix id thread many_write getpgid rename taint
 
 rename:
 	$(CCC) $(INCLUDES) rename.c $(LIB) -o rename.o $(CCFLAGS)
@@ -66,6 +66,9 @@ getpgid:
 
 socketpair:
 	$(CCC) $(INCLUDES) socketpair.c $(LIB) -o socketpair.o $(CCFLAGS)
+
+taint:
+	$(CCC) $(INCLUDES) taint.c $(LIB) -o taint.o $(CCFLAGS)
 
 clean:
 	rm -f *.o
