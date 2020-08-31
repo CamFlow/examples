@@ -4,9 +4,9 @@
 
 We expect the graph to have some unique patterns at the start.
 
-A lot of repeating pattern for most of the program.
+A lot of repeating patterns for most of the program.
 
-Some unique pattern at the end.
+Some unique patterns at the end.
 
 [see code](many_read.c)
 
