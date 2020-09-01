@@ -64,7 +64,7 @@ int main(){
   strncpy(buff, HELLO_WORLD, BUFSIZE);
 
   /* send the message to the server */
-  write(sockfd, buff, strlen(buf));
+  write(sockfd, buff, strlen(buff));
 
   /* read the server's reply */
   bzero(buff, BUFSIZE);
