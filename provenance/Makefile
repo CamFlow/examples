@@ -67,8 +67,5 @@ getpgid:
 socketpair:
 	$(CCC) $(INCLUDES) socketpair.c $(LIB) -o socketpair.o $(CCFLAGS)
 
-taint:
-	$(CCC) $(INCLUDES) taint.c $(LIB) -o taint.o $(CCFLAGS)
-
 clean:
 	rm -f *.o
