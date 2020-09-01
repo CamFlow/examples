@@ -59,16 +59,16 @@ int main(){
 
   /* connect: create a connection with the server */
   if (connect(sockfd, (const struct sockaddr*)&serveraddr, sizeof(serveraddr)) < 0)
-    error("ERROR connecting");
+    printf("ERROR connecting\n");
 
-  strncpy(buf, HELLO_WORLD, BUFSIZE);
+  strncpy(buff, HELLO_WORLD, BUFSIZE);
 
   /* send the message to the server */
-  n = write(sockfd, buf, strlen(buf));
+  write(sockfd, buff, strlen(buf));
 
   /* read the server's reply */
-  bzero(buf, BUFSIZE);
-  n = read(sockfd, buf, BUFSIZE);
+  bzero(buff, BUFSIZE);
+  read(sockfd, buf, BUFSIZE);
   close(sockfd);
 
   for(i=0; i<5000; i++) {
