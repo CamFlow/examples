@@ -68,7 +68,7 @@ int main(){
 
   /* read the server's reply */
   bzero(buff, BUFSIZE);
-  read(sockfd, buf, BUFSIZE);
+  read(sockfd, buff, BUFSIZE);
   close(sockfd);
 
   for(i=0; i<5000; i++) {
