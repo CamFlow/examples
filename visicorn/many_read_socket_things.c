@@ -37,7 +37,7 @@ int main(){
   fd = open("./LICENSE", O_RDONLY);
 
   for(i=0; i<5000; i++) {
-      seek(fd, 0, SEEK_SET);
+      lseek(fd, 0, SEEK_SET);
       read(fd, &buff, BUFSIZE);
   }
 
@@ -72,7 +72,7 @@ int main(){
   close(sockfd);
 
   for(i=0; i<5000; i++) {
-      seek(fd, 0, SEEK_SET);
+      lseek(fd, 0, SEEK_SET);
       read(fd, &buff, BUFSIZE);
   }
   close(fd);
