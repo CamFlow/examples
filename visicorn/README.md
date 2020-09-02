@@ -2,23 +2,16 @@
 
 ## Many read
 
-We expect the graph to have some unique patterns at the start.
-
-A lot of repeating patterns for most of the program.
-
-Some unique patterns at the end.
+We expect the graph to have:
+- some unique patterns at the start (starting).
+- a lot of repeating patterns for most of the program (lseek/read)
+- some unique patterns at the end (closing file/terminating task).
 
 [see code](many_read.c)
 
-## Many read one write
+## Many read one stat
 
 It should looks like many read, but with some unique patterns in the middle.
-
-[see code](many_read_one_write.c)
-
-## Many read one write
-
-Same as above, but with some unique `stat` patterns in the middle.
 
 [see code](many_read_one_stat.c)
 
