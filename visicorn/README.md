@@ -11,12 +11,12 @@ We expect the graph to have:
 
 ## Many read one stat
 
-It should looks like many read, but with some unique patterns in the middle.
+It should looks like many read, but with some unique patterns in the middle (stat).
 
 [see code](many_read_one_stat.c)
 
 ## Many read socket thing
 
-Same as above, but should have a larger anomaly in the middle.
+Same as above, but should have a larger anomaly in the middle (socket: create, connect, send, recv).
 
 [see code](many_read_socket_things.c)
