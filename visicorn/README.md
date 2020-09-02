@@ -20,3 +20,7 @@ It should looks like many read, but with some unique patterns in the middle (sta
 Same as above, but should have a larger anomaly in the middle (socket: create, connect, send, recv).
 
 [see code](many_read_socket_things.c)
+
+## Histogram
+
+We assume that all "phase" will correspond to a group of "buckets" in the histogram.
