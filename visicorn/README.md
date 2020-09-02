@@ -16,6 +16,12 @@ It should looks like many read, but with some unique patterns in the middle.
 
 [see code](many_read_one_write.c)
 
+## Many read one write
+
+Same as above, but with some unique `stat` patterns in the middle.
+
+[see code](many_read_one_stat.c)
+
 ## Many read socket thing
 
 Same as above, but should have a larger anomaly in the middle.
