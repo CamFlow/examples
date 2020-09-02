@@ -24,3 +24,5 @@ Same as above, but should have a larger anomaly in the middle (socket: create, c
 ## Histogram
 
 We assume that all "phase" will correspond to a group of "buckets" in the histogram.
+
+We expect to see the "buckets" corresponding to the "starting" phase to decay during the life time, the other phase may not have time to significantly do so.
