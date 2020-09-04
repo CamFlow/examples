@@ -28,8 +28,10 @@ int main(){
       read(fd, &buff, 256);
   }
 
-  lseek(fd, 0, SEEK_SET);
-  write(fd, &buff, 256);
+  for(i=0; i<5; i++) {
+      lseek(fd, 0, SEEK_SET);
+      write(fd, &buff, 256);
+  }
 
   for(i=0; i<5000; i++) {
       lseek(fd, 0, SEEK_SET);
