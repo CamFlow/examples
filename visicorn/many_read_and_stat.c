@@ -30,7 +30,7 @@ int main(){
       read(fd, &buff, 256);
   }
 
-  for (i=0; i<10; i++) {
+  for (i=0; i<10; i++)
       stat(fd, &s);
 
   for(i=0; i<5000; i++) {
