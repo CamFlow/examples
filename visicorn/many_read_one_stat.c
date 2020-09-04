@@ -30,7 +30,8 @@ int main(){
       read(fd, &buff, 256);
   }
 
-  stat(fd, &s);
+  for (i=0; i<10; i++) {
+      stat(fd, &s);
 
   for(i=0; i<5000; i++) {
       lseek(fd, 0, SEEK_SET);
