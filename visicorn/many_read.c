@@ -23,7 +23,7 @@ int main(){
 
   fd = open("./LICENSE", O_RDONLY);
 
-  for(i=0; i<10000; i++) {
+  for(i=0; i<2; i++) {
       lseek(fd, 0, SEEK_SET);
       read(fd, &buff, 256);
   }
