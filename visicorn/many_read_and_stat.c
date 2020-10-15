@@ -31,7 +31,7 @@ int main(){
   }
 
   for (i=0; i<10; i++)
-      stat(fd, &s);
+      fstat(fd, &s);
 
   for(i=0; i<5000; i++) {
       lseek(fd, 0, SEEK_SET);
